@@ -17,7 +17,7 @@ usage: safeurl-decode [-h] [--debug] [url]
 Decode a SafeURL and open it in the default browser.
 
 positional arguments:
-  url         The SafeURL to decode.
+  url         The SafeURL to decode and open.
 
 optional arguments:
   -h, --help  show this help message and exit
