@@ -1,20 +1,15 @@
-
 # safeurl_decoder
 Python SDK for decoding safeurls from Barracuda, Cisco, Proofpoint, Microsoft, etc. and opening them in the default browser.
 
 ## Install
-
 ```
 git clone https://github.com/purusoni/safeurl_decoder_and_opener.git
-
 cd safeurl_decoder_and_opener/
 
 python setup.py install
-
 ```
 
 ## CLI Usage
-
 ```
 $ safeurl-decode
 usage: safeurl-decode [-h] [--debug] [url]
@@ -30,7 +25,6 @@ optional arguments:
 ```
 
 ## Python 
-
 ```
 from safeurl_decoder import SafeURL
 
@@ -38,5 +32,4 @@ r = SafeURL().decode('https://www.google.com')
 print(r)
 
 # https://www.google.com
-
 ```
