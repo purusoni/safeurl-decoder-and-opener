@@ -1,4 +1,5 @@
 import logging
+import os
 from argparse import ArgumentParser
 from urllib.parse import urlparse, parse_qs, unquote
 
@@ -76,8 +77,8 @@ class SafeURL(object):
 def main():
 
     p = ArgumentParser()
+    p.add_argument('url', default=None, nargs="?",  help='url to decode')
     p.add_argument('--debug', '-d', help='enable debug logging', action='store_true')
-    p.add_argument('--url', '-u', help='url to decode')
 
     args = p.parse_args()
 
@@ -87,8 +88,10 @@ def main():
     if not args.url:
         p.print_usage()
         raise SystemExit
-
-    print(SafeURL().decode(args.url))
+    
+    decoded_url = SafeURL().decode(args.url)
+    print("Decoded URL:", decoded_url)
+    os.system(f"open {decoded_url}")
 
 
 if __name__ == "__main__":
