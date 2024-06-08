@@ -1,5 +1,5 @@
 import logging
-import os
+import webbrowser
 from argparse import ArgumentParser
 from urllib.parse import urlparse, parse_qs, unquote
 
@@ -91,8 +91,7 @@ def main():
     
     decoded_url = SafeURL().decode(args.url)
     print("Decoded URL:", decoded_url)
-    os.system(f"open {decoded_url}")
-
+    webbrowser.open(decoded_url)
 
 if __name__ == "__main__":
     main()
